@@ -1,56 +1,54 @@
 # Git Kata: Basic Commits
-This kata will introduce you to the `git add` and `git commit` commands.
-
-This is a very introductory kata. if you have used `git status`, `git log --oneline --graph`, `git add` and `git commit` extensively you should probably skip it.
-
-You can look at the bottom of this file, if you have not yet done basic git configuration.
-
-## Setup:
-
-1. Run `. setup.sh` (or `.\setup.ps1` in PowerShell)
 
 ## The task
 
 1. Use `git status` to see which branch you are on.
+![Answer to Q1](images/Q1,png)
+
 2. What does `git log` look like?
+![Answer to Q2](images/Q2.png)
+
 3. Create a file
+` $ touch test.txt`
+
 4. What does the output from `git status` look like now?
+![Answer to Q4](images/Q4.png)
+
 5. `add` the file to the staging area
+` $ git add test.txt`
+
 6. How does `git status` look now?
+![Answer to Q6](images/Q6.png)
+
 7. `commit` the file to the repository
+![Answer to Q7](images/Q7.png)
+
 8. How does `git status` look now?
+![Answer to Q8](images/Q8.png)
+
 9. Change the content of the file you created earlier
+` $ echo "STUFF" >>test.txt `
+
 10. What does `git status` look like now?
+![Answer to Q10](images/Q10.png)
+
 11. `add` the file change
+` $ git add test.txt`
+
 12. What does `git status` look like now?
+![Answer to Q12](images/Q12.png)
+
 13. Change the file again
+` $ echo "more STUFF" >>test.txt`
+
 14. Make a `commit`
+` $ git commit -m "added more stuff to test.txt"`
 15. What does the `status` look like now? The `log`?
+![Answer to Q14 - git status](images/Q14-1.png)
+![Answer to Q14 - git log](images/Q14-2.png)
+
 16. Commit the newest change
-
-## Useful commands
-- `git add`
-- `git commit`
-- `git commit -m "My commit message"`
-- `git log`
-- `git log -n 5`
-- `git log --oneline`
-- `git log --oneline --graph`
-- `touch filename` to create a file (or `sc filename ''` in PowerShell)
-- `echo content > file` to overwrite file with content (or `sc filename 'content'` in PowerShell)
-- `echo content >> file` to append file with content (or `ac filename 'content'` in PowerShell)
-
-
-## Git Initial Configuration
-1. `git config --global user.name "John Doe"`
-1. `git config --global user.email "johndoe@example.com`
-
-For the vim scared:
-- `git config --global core.editor nano`
-
-For the windows peeps:
-- `git config --global core.editor notepad`
-
-Other editor options:
-- `git config --global core.editor "atom --wait"`
-- `git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst"`
+``` 
+$ git add test.txt
+$ git commit -m "added more stuff to test.txt"
+```
